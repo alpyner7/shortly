@@ -17,7 +17,6 @@ def login(request):
                         return redirect(request.POST.get('next'))
                     else:
                         return redirect('/')
-                    return redirect('/')
                 except User.DoesNotExist:
                     return render(request, 'login.html', {'error': "User Doesn't Exist"})
             else:
